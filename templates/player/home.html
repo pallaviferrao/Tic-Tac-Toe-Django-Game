@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title{{user.username}}</title>
+    <link href ="{% static 'player/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<h1>Hi.{{user.username}}</h1>
+<ul>
+    {% for g in games %
+    <li>{{g.id}}</li>
+</ul>
+</body>
+</html>
